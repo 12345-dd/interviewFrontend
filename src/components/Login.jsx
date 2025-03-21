@@ -2,7 +2,7 @@ import { Box, Button, Card, CardContent, Container, TextField, Typography } from
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Login = ({ setuser }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -53,7 +53,7 @@ export const Login = ({ setuser }) => {
                     </form>
                     <Box textAlign="center" sx={{ mt: 2 }}>
                         <Typography variant="body2">
-                            Don't have an account? <a href="/register">Sign Up</a>
+                            Don't have an account? <Link to="/register">Sign Up</Link>
                         </Typography>
                     </Box>
                 </CardContent>
