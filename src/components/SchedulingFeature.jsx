@@ -18,7 +18,7 @@ export const SchedulingFeature = () => {
     }
 
     try {
-      await axios.post("http://localhost:4000/booking", { userId, peerId, dateTime });
+      await axios.post("https://interviewbackend-buhr.onrender.com/booking", { userId, peerId, dateTime });
 
       alert("Interview scheduled! You can join at the scheduled time.");
       navigate("/");
